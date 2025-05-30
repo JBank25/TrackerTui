@@ -1,0 +1,29 @@
+version: '3'
+
+tasks:
+  conan-install:
+    desc: Install conan (used to handle external dependencies)
+    cmds:
+      - pip install conan 
+
+  conan-init-profile:
+    desc: Create default conan profile. See ~/.conan2/profiles/. Contains user data required to use conan
+    cmds:
+      - conan profile detect --force
+
+  conan-prep-builds:
+    desc: Install and build conan dependencies 
+    cmds:
+      -  conan install . --build=missing
+  build:
+    desc: build tracker TUI project
+    cmds:
+      - cmake --preset conan-release 
+      - cmake --build --preset conan-release 
+
+  run:
+    desc: Run release build
+    dir:
+      'build/Release'
+    cmds:
+      - ./TrackerTui
