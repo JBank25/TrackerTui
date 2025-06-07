@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/jurbank/Documents/Dev/TUIProgramming/build/Release",
+  "command": "/usr/bin/c++  -isystem /home/jurbank/.conan2/p/b/ftxui58276a378c76d/p/include -m64 -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/TrackerTui.dir/main.cpp.o -c /home/jurbank/Documents/Dev/TUIProgramming/main.cpp",
+  "file": "/home/jurbank/Documents/Dev/TUIProgramming/main.cpp",
+  "output": "CMakeFiles/TrackerTui.dir/main.cpp.o"
+}
+]
